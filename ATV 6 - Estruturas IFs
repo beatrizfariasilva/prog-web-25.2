@@ -1,0 +1,70 @@
+//EXERCÍCIO 1: VERIFICAR IDADE PARA VOTAR
+
+const idade = prompt("Digite sua idade aqui");
+
+if (idade<16){
+    console.log("Não pode votar.");
+}
+
+else if ((idade==16 || idade==17) || idade>70){
+    console.log("Voto facultativo");
+}
+
+else {
+    console.log("Voto obrigatório");
+}
+
+//EXERCÍCIO 2: CLASSIFICAR NOTAS ESCOLARES
+const nota = prompt("Digite a nota recebida");
+
+if (nota>=7){
+    console.log("Situação: Aprovado");
+}
+
+else if (nota>=5 && nota<=6.9){
+    console.log("Situação: Recuperação");
+}
+
+else {
+    console.log("Situação: Reprovado");
+}
+
+//EXERCÍCIO 3: CHECAR NUMERO PAR OU IMPAR
+const n = prompt("Digite um número que direi se é par ou ímpar");
+
+if (n%2==0){
+    console.log("É par");
+}
+
+else {
+    console.log("É ímpar");
+}
+
+//EXERCÍCIO 4: IDENTIFICADOR DE ESTAÇÕES DO ANO
+const atual = prompt("Digite o mês atual e eu direi em qual estação do ano você está");
+
+if (atual==12 || atual==1 || atual==2 ){
+    console.log("Você está no verão");
+}
+
+else if (atual==3 || atual==4 || atual==5 ){
+    console.log("Você está no outono");
+}
+
+else if (atual==6 || atual==7 || atual==8 ){
+    console.log("Você está no inverno");
+}
+
+else {
+    console.log("Você está na primavera");
+
+}
+
+//EXERCÍCIO 5: QUAL É MAIOR
+const n1 = prompt("Digite o primeiro numero");
+const n2 = prompt("Digite o segundo numero");
+const n3 = prompt("Digite o terceiro numero");
+
+if (n1>n2 && n1>n3){
+    console.log(`O maior numero é $`)
+}
