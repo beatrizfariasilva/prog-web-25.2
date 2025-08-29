@@ -1,0 +1,32 @@
+let nomesfuncionarios=['a', 'b', 'c', 'd', 'l', 's', 'v'];
+let cargos=[1, 2, 3, 1, 2, 2, 3];
+
+let cargo;
+
+cargo=prompt("Digite em qual é o setor do novo funcionário");
+
+if (cargo==1) {
+    console.log("Você está no grupo da diretoria");
+    cargos.push(1);
+    let nome=prompt('Digite o nome do funcionario');
+    nomesfuncionarios.push(nome);
+}
+
+else if (cargo==2) {
+    console.log("Você está no grupo dos professores");
+    cargos.push(2);
+    let nome2=prompt('Digite o nome do funcionario');
+    nomesfuncionarios.push(nome2);
+}
+
+else {
+    console.log("Você está no grupo da secretaria");
+    cargos.push(3);
+    let nome3=prompt('Digite o nome do funcionario');
+    nomesfuncionarios.push(nome3);
+}
+
+
+
+console.log(nomesfuncionarios);
+console.log(cargos);
