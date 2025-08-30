@@ -65,6 +65,106 @@ const n1 = prompt("Digite o primeiro numero");
 const n2 = prompt("Digite o segundo numero");
 const n3 = prompt("Digite o terceiro numero");
 
-if (n1>n2 && n1>n3){
-    console.log(`O maior numero é $`)
+//EXERCÍCIO 6: VERIFICAR LOGIN
+const usuario = prompt("Digite o seu login");
+const senha=prompt("Digite sua senha");
+
+if (usuario=='admin' && senha=='1234'){
+    console.log('Login bem-sucedido');
+}
+
+else{
+    console.log('Usuário ou senha inválidos')
+}
+
+//EXERCÍCIO 7: CALCULAR DESCONTO EM COMPRAS
+const valor = prompt("Digite o valor da compra");
+
+if (valor<100){
+    console.log('Não haverá desconto na compra');
+}
+
+else if (valor>=100 && valor<=500){
+    console.log('Haverá 10% de desconto no valor da compra.');
+    console.log(`Valor antes: R${valor}`);
+    console.log(`Valor final: R${valor*0.9}`);
+}
+
+else{
+    console.log('Haverá 20% de desconto no valor da compra.');
+    console.log(`Valor antes: R${valor}`);
+    console.log(`Valor final: R${valor*0.8}`);
+}
+
+//EXERCÍCIO 8: CLASSIFICAR IMC
+const peso = prompt("Digite o seu peso atual");
+const altura = prompt("Digite o sua altura atual");
+
+let IMC = (peso/(altura*altura));
+
+if (IMC<18.5){
+    console.log('Você está abaixo do peso');
+}
+
+else if (IMC>=18.5 && IMC<25){
+    console.log('Você está normal');
+}
+
+else if (IMC>=25 && IMC<30){
+    console.log('Você está com sobrepeso');
+}
+
+else{
+    console.log('Você está com obesidade');
+}
+
+//EXERCÍCIO 9: VALIDAR DIA DA SEMANA
+const dia = prompt("Digite um número de 1 a 7");
+
+if (dia==1){
+    console.log('1=domingo');
+}
+
+else if (dia==2){
+    console.log('2=segunda');
+}
+
+else if (dia==3){
+    console.log('3=terça');
+}
+
+else if (dia==4){
+    console.log('4=quarta');
+}
+
+else if (dia==5){
+    console.log('5=quinta');
+}
+
+else if (dia==6){
+    console.log('6=sexta');
+}
+
+else if (dia==7){
+    console.log('7=sábado');
+}
+
+else {
+    console.log('Número inválido');
+}
+
+//EXERCÍCIO 10: JOGO DE ADVINHAÇÃO SIMPLES
+const numsecreto=8;
+const advinhe=prompt('Advinhe o número que estou pensando');
+
+if (advinhe!=numsecreto){
+    if (advinhe<numsecreto){
+        console.log('Muito baixo!');
+    }
+    else if (advinhe>numsecreto){
+        console.log('Muito alto!')
+    }
+}
+else{
+    console.log('Parabéns, você acertou!')
 }
