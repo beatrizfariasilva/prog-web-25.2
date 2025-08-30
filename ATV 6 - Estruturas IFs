@@ -65,6 +65,18 @@ const n1 = prompt("Digite o primeiro numero");
 const n2 = prompt("Digite o segundo numero");
 const n3 = prompt("Digite o terceiro numero");
 
+if ((n1 >= n2) && (n1 >= n3)) {
+    console.log("O maior número é ", n1);
+}
+
+else if ((n2 >= n1) && (n2 >= n3)) {
+    console.log("O maior número é ", n2);
+}
+
+else{
+    console.log("O maior número é ", n3);
+}
+
 //EXERCÍCIO 6: VERIFICAR LOGIN
 const usuario = prompt("Digite o seu login");
 const senha=prompt("Digite sua senha");
@@ -168,3 +180,5 @@ if (advinhe!=numsecreto){
 else{
     console.log('Parabéns, você acertou!')
 }
+
+
