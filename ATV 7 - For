@@ -1,0 +1,31 @@
+//EXERCÍCIO 1: CONTANDO DE 1 A 10
+for (var i=1; i<=10; i++){
+    console.log(i);
+}
+
+//EXERCÍCIO 2: CONTAGEM REGRESSIVA
+for (var i=10; i>=0; i--){
+    if (i===0){
+        console.log('Lançar!');
+    }
+
+    else{
+        console.log(i);
+    }
+}
+
+//EXERCÍCIO 3: SOMATÓRIO SIMPLES
+let contador = 0;
+for (var i=1; i<=100; i++){
+    contador += i;
+}
+
+console.log(contador);
+
+//EXERCÍCIO 4: PARES ATÉ N
+const n = prompt('Digite um número inteiro');
+for (var i=0; i<n; i++){
+    if (i%2===0){
+        console.log(i);
+    }
+}
