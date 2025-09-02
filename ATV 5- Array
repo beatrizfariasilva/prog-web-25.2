@@ -1,0 +1,62 @@
+//EXERCÍCIO 1: Soma dos números pares 
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+const npares = numeros.filter(n => n % 2 === 0);
+const soma = npares.reduce((acumulador, n) => acumulador + n, 0);
+
+console.log(soma);
+
+//EXERCÍCIO 2: Normalizar nomes
+const baguncado = ["  Ana ", "JOÃO", "  maRiA"];
+const normalizado = baguncado.map(nome => nome.trim().toLowerCase());
+
+console.log(normalizado);
+
+//EXERCÍCIO 3: Remover duplicados
+const num = [1, 2, 2, 4];
+const nduplicado = [...new Set(num)];
+
+console.log(nduplicado);
+
+//EXERCÍCIO 4: Encontrar um objeto por chave
+const pessoas = [
+    { id: 1, nome: 'Ana' },
+    { id: 2, nome: 'João' },
+    { id: 3, nome: 'Maria' }
+];
+
+const alvo = 3;
+const encontrei = pessoas.find(obj => obj.id === alvo) || null;
+
+console.log(encontrei);
+
+//EXERCÍCIO 5: Ordenar por propriedade
+const alunos = [
+    { idade: 13, nome: 'Ana' },
+    { idade: 12, nome: 'João' },
+    { idade: 13, nome: 'Maria' }
+];
+
+const alunosemordem = [...alunos].sort((a, b) => a.idade - b.idade || a.nome.localeCompare(b.nome));
+
+console.log(alunosemordem);
+
+//EXERCÍCIO 6: Agrupar por categoria 
+const produtos = [
+    { nome: "Arroz", categoria: "Alimentos" },
+    { nome: "Batata", categoria: "Alimentos" },
+    { nome: "Sabonete", categoria: "Higiene" },
+    { nome: "Pasta de dente", categoria: "Higiene" }
+];
+
+const agrupando = produtos.reduce((acc, p) => {
+    (acc[p.categoria] ??= []).push(p);
+    return acc;
+}, {});
+
+console.log(agrupando);
+
+//EXERCÍCIO 7: Agrupar por categoria
+const n = [[1, 2], [3, [4]], 5];
+const somando = n.flat(Infinity).reduce((acc, n) => acc + n, 0);
+
+console.log(somando);
