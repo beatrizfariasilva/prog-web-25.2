@@ -29,3 +29,119 @@ for (var i=0; i<n; i++){
         console.log(i);
     }
 }
+
+//EXERCÍCIO 5: TABUADA
+const num = prompt('Digite um número inteiro');
+for (var i=0; i<11; i++){
+    console.log(`${num} x ${i} = ${num * i}`);
+}
+
+//EXERCÍCIO 6: ITERANDO UM ARRAY
+const nums = [3, 9, 12, 5];
+for (let i=0; i<nums.length; i++){
+    console.log(`Índice: ${i+1} Valor: ${nums[i]}`);
+}
+
+//EXERCÍCIO 7: MAIOR VALOR DO ARRAY
+const numes = [3, 9, 12, 5];
+let max = numes[0];
+
+for (var i=0; i<numes.length; i++){
+    if (numes[i]>max){
+        max=numes[i];
+    }
+}
+
+console.log(max);
+
+//EXERCÍCIO 8: CONTAR OCORRÊNCIAS
+const array=['a','b','a','c','a'];
+let contador2;
+
+for (var i=0; i<array.length; i++){
+    if (array[i]==='a'){
+        contador2++;
+    }
+}
+
+console.log(`A letra 'a' aparece ${contador2} vezes.`);
+
+//EXERCÍCIO 9: REVERTER STRING
+const s = "javascript";
+let novastring = '';
+
+for (var i=s.length-1; i>0; i--){
+    novastring+=s[i];
+    crescente++;
+}
+
+console.log(novastring);
+
+//EXERCÍCIO 10: REVERTER STRING
+const m = [[1,2],[3,4],[5,6]];
+let soma=0;
+
+for (var i=0; i<m.length; i++){
+    for (var j=0; j<m[i].length; j++){
+        soma+=m[i][j];
+    }
+}
+
+console.log(soma);
+
+//EXERCÍCIO 11: FILTRAR MANUALMENTE
+const numero=[3, 7, 12, 5, 18, 1, 22];
+let resultado=[];
+
+for (let i=0; i<numero.length; i++){
+    if (numero[i]>10) {
+        resultado.push(numero[i]);
+    }
+}
+
+console.log(resultado);
+
+//EXERCÍCIO 12: FOR EM STRINGS E ARRAYS
+const words='for';
+const arraynum=[1, 2, 3];
+
+for (const ch of words){
+    console.log(ch);
+}
+
+for (const x of arraynum){
+    console.log(x);
+}
+
+//EXERCÍCIO 13: FOR IN OBJETOS
+const user={id: 1, nome: 'Ana', ativo: true};
+for (const k in user){
+    console.log(k, user[k]); 
+}
+
+//EXERCÍCIO 14: QUEBRA E CONTINUAÇÃO
+for (let i=1; i<=20; i++){
+    if (i%2!==0){
+        continue;
+    }
+    
+    else if (i%7===0 && i!==7) {
+        break;
+    }
+
+    else{
+        console.log(i);
+    }
+}
+
+//EXERCÍCIO 15: FATORIAL COM FOR
+const pedindon=prompt('Digite um número inteiro');
+let fat=1;
+
+for (let i=2; i<=pedindon; i++){
+    fat*=i;
+}
+
+console.log(fat);
+
+
