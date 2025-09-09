@@ -1,0 +1,53 @@
+let dadosdebia = {
+    firstName: "Beatriz",
+    lastName: "Farias",
+    cordosolhos: "Marrom"
+};
+let cpfs=[1234, 2345, 4567, 6789, 9087];
+let alunos=['ana', 'beatriz', 'carlos', 'daniel', 'eduarda'];
+
+function adicionarnovoaluno(listadealunos, nomenovoaluno){
+    listadealunos.push(nomenovoaluno);
+}
+
+function desmatricular(listadecpfs, cpfalunoantigo){
+    for (i=0; i<listadealunos.lenght; i++){
+        if (listadecpfs[i]==cpfalunoantigo){
+            listadecpfs.splice(i, 1);
+        }
+    }
+}
+
+
+function alterardado(dadosalunox, dadoremovivel){
+    delete dadosalunox.dadoremovivel;
+
+}
+
+function operacoes(oper){
+    switch(oper){
+        case 'adicionar novo aluno':
+            const nomecompleto=prompt("Digite o nome completo do novo aluno");
+            adicionarnovoaluno(alunos, nomecompleto);
+            console.log("Lista de alunos atualizada")
+            console.log(alunos);
+            break;
+        
+        case 'desmatricula':
+            const ndematricula=prompt("Digite o número de matrícula do aluno a ser desmatriculado");
+            desmatricular(cpfs, '1234');
+            console.log("Lista de CPFs atualizada")
+            console.log(cpfs);
+            break;
+
+        case 'apagar dado':
+            const dadoasermudado=prompt("Digite qual dado o aluno deseja alterar");
+            alterardado(dadosdebia, dadoasermudado);
+            console.log("Dados atualizados do aluno")
+            console.log(dadosdebia);
+            break;
+    }
+}
+
+const oquequero = prompt("Qual operação deve ser executada?");
+operacoes(oquequero);
