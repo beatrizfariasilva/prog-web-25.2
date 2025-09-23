@@ -1,5 +1,4 @@
 //EXERCÍCIO 1
-
 function paraCelsius(farenheit){
     return (5/9) * (farenheit-32);
 }
@@ -25,3 +24,161 @@ function menu() {
 }
 
 menu();
+
+
+
+
+//EXERCÍCIO 2
+function soma (n1, n2, n3){
+    return n1+n2+n3;
+}
+
+function media(){
+    return soma(90, 57, 567)/3;
+}
+
+console.log(media());
+
+
+
+
+//EXERCÍCIO 3
+const valor1 = prompt("Digite um número inteiro");
+const valor2 = prompt("Digite um segundo número inteiro");
+const valor3 = prompt("Digite um terceiro número inteiro");
+
+function procurarMaior(valor1, valor2, valor3){
+    let maior = valor1;
+
+    if (valor2>maior){
+        if (valor2>valor3){
+            maior=valor2;
+        }
+        else {
+            if (valor3>maior){
+                maior=valor3;
+            }
+        }
+    }
+    return maior;
+}
+
+function procurarMenor(valor1, valor2, valor3){
+    let menor = valor1;
+
+    if (valor2<menor){
+        if (valor2<valor3){
+            menor=valor2;
+        }
+        else {
+            if (valor3<menor){
+                menor=valor3;
+            }
+        }
+    }
+    return menor;
+}
+
+console.log("O maior valor digitado é: "+procurarMaior(valor1, valor2, valor3));
+console.log("O menor valor digitado é: "+procurarMenor(valor1, valor2, valor3));
+
+//EXERCÍCIO 4
+
+
+//EXERCÍCIO 5
+function ehPrimo(num){
+    let contador=0;
+    for (i=1; i<=num; i++){
+        if (num%i==0){
+            contador++;
+        }
+    }
+
+    if (contador==2){
+        console.log("É primo");
+    }
+
+    else{
+        console.log("Não é primo");
+    }
+}
+
+function mostrandoPrimos(num){
+    for (i=1; i<=num; i++){
+        if (i==1){
+            continue;
+        }
+        if (i%2==0 && i!=2){
+            continue;
+        }
+        else if (i%3==0 && i!=3){
+            continue;
+        }
+        else if (i%5==0 && i!=5){
+            continue;
+        }
+        else if (i%7==0 && i!=7){
+            continue;
+        }
+    
+        else{
+            console.log(i);
+        }
+    }
+}
+
+const n = prompt("Digite um número que eu direi se ele é primo e mostrarei todos os números primos que existem até ele");
+ehPrimo(n);
+console.log("Lista de primos até o número digitado: ");
+mostrandoPrimos(n);
+
+//EXERCÍCIO 6
+function ehPerfeito(num){
+    let soma=0;
+    for (i=1; i<=num; i++){
+        if (num%i==0){
+            soma=soma+i;
+        }
+    }
+
+    if (soma===num){
+        console.log("É perfeito");
+    }
+    else{
+        console.log("Não é perfeito");
+    }
+}
+
+function mostrandoPerfeitos(num){
+    let soma=0;
+    for(j=1; j<=num; j++){  
+        for (i=1; i<=j; i++){
+            if (j%i==0){
+                soma=soma+i;
+            }
+        }
+
+        if (soma===j){
+            console.log(soma);
+        }
+
+        }
+}
+
+const perfeito = prompt("Digite um número que eu direi se ele é perfeito e mostrarei todos os números perfeitos que existem até ele")
+ehPerfeito(perfeito);
+mostrandoPerfeitos(perfeito);
+
+//EXERCÍCIO 7
+function impressao(n){
+    for(i=1; i<n; i++){
+        while (i<0){
+            console.log(i);
+            i--;
+        }
+    }
+}
+
+const x = prompt("Digite um número inteiro");
+impressao(x);
+
