@@ -1,0 +1,27 @@
+//EXERCÍCIO 1
+
+function paraCelsius(farenheit){
+    return (5/9) * (farenheit-32);
+}
+
+function paraFarenheit(celcius){
+    return (celcius * 9/5) + 32;
+}
+
+function menu() {
+    const desejo = prompt("Digite a opção desejada:\n1. Converter de Celsius para Farenheit\n2. Converter de Farenheit para Celsius");
+    switch(desejo){
+        case "1":
+            const f = prompt("Digite a temperatura que deseja converter");
+            console.log(paraFarenheit(f)+"°");
+            break;
+        case "2":
+            const c = prompt("Digite a temperatura que deseja converter");
+            console.log(paraCelsius(c)+"°");
+            break;
+        default:
+            console.log("Digite 1 ou 2.");
+    }
+}
+
+menu();
